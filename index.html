@@ -366,6 +366,14 @@
     <p>© <span id="year"></span> Jake. All rights reserved, allegedly.</p>
   </footer>
 
+  <div id="jakeLockdown" class="lockdown hidden">
+    <div class="lockdown-inner">
+      <p class="lockdown-label">ALERT</p>
+      <p class="lockdown-main">USER HAS DEFIED JAKE</p>
+      <p class="lockdown-sub">This incident will not be reviewed.</p>
+    </div>
+  </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('enterJake').addEventListener('click', () => {
@@ -392,11 +400,28 @@
       });
     });
 
-    // Do Not Click button
+    // Do Not Click button – escalating behavior
     const doNotClick = document.getElementById('doNotClick');
+    const lockdown = document.getElementById('jakeLockdown');
+    let clickCount = 0;
+
     if (doNotClick) {
       doNotClick.addEventListener('click', () => {
-        alert('Jake appreciates your curiosity. This interaction has been noted.');
+        clickCount += 1;
+
+        if (clickCount === 1) {
+          alert('Jake asked you politely.');
+        } else if (clickCount === 2) {
+          alert('This is strike one.');
+        } else {
+          // Lockdown mode
+          lockdown.classList.remove('hidden');
+          document.body.classList.add('lockdown-active');
+          setTimeout(() => {
+            lockdown.classList.add('hidden');
+            document.body.classList.remove('lockdown-active');
+          }, 4200);
+        }
       });
     }
   </script>
