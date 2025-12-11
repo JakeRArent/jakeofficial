@@ -1,4 +1,4 @@
-/* Jake Brand Styles - Phase 2 */
+/* Jake Brand Styles - Phase 3 */
 :root {
   --jake-black: #0d0d0d;
   --jake-white: #ffffff;
@@ -202,6 +202,13 @@ body {
 }
 
 /* Press */
+.press-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+  gap: 40px;
+  align-items: flex-start;
+}
+
 .button-outline {
   display: inline-flex;
   align-items: center;
@@ -225,6 +232,106 @@ body {
 
 .press-note {
   margin-top: 16px;
+  font-size: 13px;
+  color: var(--jake-silver);
+}
+
+.press-quotes h3 {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.press-quote {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(4, 4, 4, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+}
+
+.press-quote span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--jake-silver);
+}
+
+.press-disclaimer {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--jake-silver);
+}
+
+/* Leadership */
+.leaders {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 24px;
+}
+
+.leader-card {
+  background: var(--jake-accent);
+  border-radius: 16px;
+  padding: 20px 20px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.leader-card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.leader-title {
+  margin: 0 0 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #666;
+}
+
+.leader-card p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Roadmap */
+.roadmap {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.roadmap li {
+  padding-left: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.roadmap li::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--jake-white);
+}
+
+.roadmap h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.roadmap p {
   font-size: 13px;
   color: var(--jake-silver);
 }
@@ -283,6 +390,12 @@ body {
 }
 
 /* Small screens */
+@media (max-width: 800px) {
+  .press-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   .nav a {
     margin-left: 14px;
