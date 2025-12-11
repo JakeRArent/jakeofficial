@@ -10,14 +10,14 @@
   <meta property="og:title" content="JAKE." />
   <meta property="og:description" content="A brand without a product." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jakeofficial.com" />
-  <meta property="og:image" content="https://jakeofficial.com/jake-og-image.jpg" />
+  <meta property="og:url" content="https://jakeofficial.org" />
+  <meta property="og:image" content="https://jakeofficial.org/jake-og-image.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="JAKE." />
   <meta name="twitter:description" content="A brand without a product." />
-  <meta name="twitter:image" content="https://jakeofficial.com/jake-og-image.jpg" />
+  <meta name="twitter:image" content="https://jakeofficial.org/jake-og-image.jpg" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -27,6 +27,8 @@
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#press">Press</a>
       <a href="#contact">Contact</a>
       <a href="legal.html">Legal</a>
     </nav>
@@ -37,31 +39,83 @@
       <div class="hero-inner">
         <h1>JAKE.</h1>
         <p class="tagline">A brand without a product.</p>
-        <button class="hero-button">Enter Jake</button>
+        <button class="hero-button" id="enterJake">Enter Jake</button>
       </div>
     </section>
 
     <section id="about" class="section section-light">
-      <div class="section-inner">
+      <div class="section-inner narrow">
         <h2>About Jake</h2>
-        <p>Jake.</p>
+        <p>Jake isn&apos;t a product. Jake isn&apos;t a service. Jake is a presence.</p>
+        <p>Some call it branding. Some call it performance art. Some call it &quot;concerning.&quot; But to us, it&apos;s simply Jake.</p>
       </div>
     </section>
 
     <section id="services" class="section section-dark">
-      <div class="section-inner three-cols">
-        <div>
-          <h3>Jake</h3>
-          <p>Jake.</p>
+      <div class="section-inner">
+        <h2>Services</h2>
+        <div class="three-cols cards">
+          <article class="card">
+            <h3>Jake Consultation</h3>
+            <p>A 30-minute session where Jake listens, nods confidently, and says, &quot;Interesting.&quot;</p>
+          </article>
+          <article class="card">
+            <h3>Jake Optimization</h3>
+            <p>We examine your current situation and add Jake. Results may vary, but Jake will not.</p>
+          </article>
+          <article class="card">
+            <h3>Jake Activation™</h3>
+            <p>We activate Jake. You will know when it happens. No further details will be provided.</p>
+          </article>
         </div>
-        <div>
-          <h3>More Jake</h3>
-          <p>More Jake.</p>
+
+        <div class="three-cols cards mt-40">
+          <article class="card">
+            <h3>Advanced Jake</h3>
+            <p>For organizations that require enterprise-grade Jake. Includes additional nodding.</p>
+          </article>
+          <article class="card">
+            <h3>Jake Strategy</h3>
+            <p>We create a long-term roadmap in which Jake appears at key, unexplained moments.</p>
+          </article>
+          <article class="card">
+            <h3>Jake Enterprise Tier</h3>
+            <p>Contact for pricing. No one knows what it costs. Not even Jake.</p>
+          </article>
         </div>
-        <div>
-          <h3>Advanced Jake</h3>
-          <p>Advanced Jake.</p>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section section-light">
+      <div class="section-inner">
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+          <article class="testimonial">
+            <p class="quote">&ldquo;Jake changed the way we think about Jake.&rdquo;</p>
+            <p class="attribution">&mdash; Harper, CEO of Harper</p>
+          </article>
+          <article class="testimonial">
+            <p class="quote">&ldquo;Before Jake, I was lost. After Jake&hellip; still lost, but now with Jake.&rdquo;</p>
+            <p class="attribution">&mdash; Anonymous</p>
+          </article>
+          <article class="testimonial">
+            <p class="quote">&ldquo;We invited Jake to speak. He didn&apos;t. It was powerful.&rdquo;</p>
+            <p class="attribution">&mdash; Midwestern Tech Conference</p>
+          </article>
+          <article class="testimonial">
+            <p class="quote">&ldquo;I don&apos;t fully understand Jake. That&apos;s why we renewed.&rdquo;</p>
+            <p class="attribution">&mdash; Global Brand Director</p>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section id="press" class="section section-dark">
+      <div class="section-inner narrow">
+        <h2>Press</h2>
+        <p>Everything you need to know about Jake is contained in this official press kit.</p>
+        <a class="button-outline" href="press-kit.zip" download>Download Press Kit</a>
+        <p class="press-note">For additional inquiries, please contact Jake. Statements will not be clarified.</p>
       </div>
     </section>
 
@@ -80,7 +134,7 @@
           </label>
           <label>
             Message
-            <textarea name="message" rows="4" placeholder="Jake."></textarea>
+            <textarea name="message" rows="4" placeholder="Why Jake?"></textarea>
           </label>
           <button type="submit">Send to Jake</button>
         </form>
@@ -94,7 +148,7 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelector('.hero-button').addEventListener('click', () => {
+    document.getElementById('enterJake').addEventListener('click', () => {
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
     });
   </script>

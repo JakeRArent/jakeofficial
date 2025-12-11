@@ -1,10 +1,11 @@
-/* Jake Brand Styles */
+/* Jake Brand Styles - Phase 2 */
 :root {
   --jake-black: #0d0d0d;
   --jake-white: #ffffff;
   --jake-slate: #1c1f22;
   --jake-silver: #d9d9d9;
   --jake-cloud: #f2f2f2;
+  --jake-accent: #f5f5f5;
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -120,6 +121,10 @@ body {
   margin: 0 auto;
 }
 
+.section-inner.narrow {
+  max-width: 720px;
+}
+
 .section h2,
 .section h3 {
   text-transform: uppercase;
@@ -136,10 +141,92 @@ body {
   color: inherit;
 }
 
+/* Grids & cards */
 .three-cols {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 32px;
+}
+
+.cards .card {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(4, 4, 4, 0.35);
+}
+
+.section-light .cards .card {
+  background: var(--jake-accent);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.cards .card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.cards .card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+/* Testimonials */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.testimonial {
+  padding: 24px 24px 20px;
+  border-radius: 16px;
+  background: var(--jake-accent);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.quote {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.attribution {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Press */
+.button-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: 1px solid var(--jake-silver);
+  color: var(--jake-white);
+  background: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+.button-outline:hover {
+  background: var(--jake-white);
+  color: var(--jake-black);
+}
+
+.press-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--jake-silver);
 }
 
 /* Contact form */
@@ -193,4 +280,17 @@ body {
 /* Offset hero for fixed header */
 .hero {
   padding-top: 64px;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .nav a {
+    margin-left: 14px;
+    font-size: 11px;
+    letter-spacing: 0.09em;
+  }
+
+  .section {
+    padding: 80px 6vw;
+  }
 }
