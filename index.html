@@ -31,9 +31,13 @@
       <a href="#press">Press</a>
       <a href="#leadership">Leadership</a>
       <a href="#roadmap">Roadmap</a>
+      <a href="#careers">Careers</a>
       <a href="#contact">Contact</a>
       <a href="legal.html">Legal</a>
     </nav>
+    <button id="modeToggle" class="mode-toggle" type="button" aria-label="Toggle Jake mode">
+      Jake prefers visibility mode.
+    </button>
   </header>
 
   <main>
@@ -201,6 +205,40 @@
       </div>
     </section>
 
+    <section id="careers" class="section section-light">
+      <div class="section-inner narrow">
+        <h2>Careers</h2>
+        <p>Join Jake in a variety of roles that may or may not formally exist.</p>
+        <div class="careers">
+          <article class="career-card">
+            <h3>Assistant to Jake</h3>
+            <p class="career-meta">Location: Remote-ish &middot; Type: Full-time-ish</p>
+            <p>Hold mirrors, maintain the aura, and occasionally remind Jake that Jake is Jake.</p>
+            <button type="button" class="career-apply">Apply Now</button>
+          </article>
+          <article class="career-card">
+            <h3>Jake Historian</h3>
+            <p class="career-meta">Location: Temporal &middot; Type: Contract</p>
+            <p>Document the evolving lore of Jake, even as the lore actively resists documentation.</p>
+            <button type="button" class="career-apply">Apply Now</button>
+          </article>
+          <article class="career-card">
+            <h3>Senior Vice President of Jake</h3>
+            <p class="career-meta">Location: Executive Plane &middot; Type: Leadership</p>
+            <p>Provide strategic oversight for Jake without ever defining what that means.</p>
+            <button type="button" class="career-apply">Apply Now</button>
+          </article>
+          <article class="career-card">
+            <h3>Jake Intern</h3>
+            <p class="career-meta">Location: Unpaid but Emotionally Rewarding</p>
+            <p>Assist with miscellaneous Jake initiatives. Experience required: none. Confidence required: yes.</p>
+            <button type="button" class="career-apply">Apply Now</button>
+          </article>
+        </div>
+        <p class="career-footer">Your application will be forwarded directly to Jake. Jake will respond if Jake chooses.</p>
+      </div>
+    </section>
+
     <section id="contact" class="section section-light">
       <div class="section-inner">
         <h2>Contact</h2>
@@ -232,6 +270,26 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('enterJake').addEventListener('click', () => {
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Dark mode that lies
+    const modeToggle = document.getElementById('modeToggle');
+    let shadowMode = false;
+    modeToggle.addEventListener('click', () => {
+      shadowMode = !shadowMode;
+      if (shadowMode) {
+        modeToggle.textContent = 'Jake prefers shadow mode.';
+      } else {
+        modeToggle.textContent = 'Jake prefers visibility mode.';
+      }
+      // Intentionally do nothing else.
+    });
+
+    // Fake apply buttons
+    document.querySelectorAll('.career-apply').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('Your application has been submitted to Jake. Jake will respond if Jake chooses.');
+      });
     });
   </script>
 </body>

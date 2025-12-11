@@ -1,4 +1,4 @@
-/* Jake Brand Styles - Phase 3 */
+/* Jake Brand Styles - Phase 4 */
 :root {
   --jake-black: #0d0d0d;
   --jake-white: #ffffff;
@@ -45,6 +45,11 @@ body {
   font-size: 18px;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav a {
   color: var(--jake-silver);
   text-decoration: none;
@@ -56,6 +61,23 @@ body {
 
 .nav a:hover {
   color: var(--jake-white);
+}
+
+.mode-toggle {
+  margin-left: 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+  color: var(--jake-silver);
+  font-size: 11px;
+  padding: 6px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mode-toggle:hover {
+  color: var(--jake-white);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Hero */
@@ -336,6 +358,62 @@ body {
   color: var(--jake-silver);
 }
 
+/* Careers */
+.careers {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.career-card {
+  background: var(--jake-accent);
+  border-radius: 16px;
+  padding: 20px 20px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.career-card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.career-meta {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #666;
+}
+
+.career-card p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.career-apply {
+  margin-top: 12px;
+  border-radius: 999px;
+  border: none;
+  padding: 10px 20px;
+  background: var(--jake-black);
+  color: var(--jake-white);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.career-apply:hover {
+  opacity: 0.9;
+}
+
+.career-footer {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #555;
+}
+
 /* Contact form */
 .contact-form {
   margin-top: 24px;
@@ -390,6 +468,18 @@ body {
 }
 
 /* Small screens */
+@media (max-width: 900px) {
+  .nav a {
+    margin-left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.09em;
+  }
+
+  .mode-toggle {
+    display: none;
+  }
+}
+
 @media (max-width: 800px) {
   .press-layout {
     grid-template-columns: 1fr;
@@ -397,12 +487,6 @@ body {
 }
 
 @media (max-width: 640px) {
-  .nav a {
-    margin-left: 14px;
-    font-size: 11px;
-    letter-spacing: 0.09em;
-  }
-
   .section {
     padding: 80px 6vw;
   }
