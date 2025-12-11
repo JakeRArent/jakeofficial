@@ -23,7 +23,10 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="logo">JAKE.</div>
+    <div class="logo-mark">
+      <span class="logo-main">JAKE.</span>
+      <span class="logo-sub">Brand experiment</span>
+    </div>
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -44,9 +47,17 @@
   <main>
     <section class="hero">
       <div class="hero-inner">
+        <div class="hero-pill">Personal brand &middot; No product</div>
         <h1>JAKE.</h1>
-        <p class="tagline">A brand without a product.</p>
-        <button class="hero-button" id="enterJake">Enter Jake</button>
+        <p class="tagline">Extremely serious branding for something that does not exist.</p>
+        <div class="hero-cta-row">
+          <button class="hero-button" id="enterJake">Enter Jake</button>
+          <span class="hero-note">Scroll to learn less.</span>
+        </div>
+      </div>
+      <div class="hero-orbit">
+        <span>Jake</span>
+        <span>™</span>
       </div>
     </section>
 
@@ -60,7 +71,10 @@
 
     <section id="services" class="section section-dark">
       <div class="section-inner">
-        <h2>Services</h2>
+        <header class="section-header">
+          <h2>Services</h2>
+          <p class="section-kicker">Structured like a consultancy. Functions like a rumor.</p>
+        </header>
         <div class="three-cols cards">
           <article class="card">
             <h3>Jake Consultation</h3>
@@ -93,9 +107,12 @@
       </div>
     </section>
 
-    <section id="testimonials" class="section section-light">
+    <section id="testimonials" class="section section-light section-divided">
       <div class="section-inner">
-        <h2>Testimonials</h2>
+        <header class="section-header">
+          <h2>Testimonials</h2>
+          <p class="section-kicker">Independent feedback from entirely dependent sources.</p>
+        </header>
         <div class="testimonials">
           <article class="testimonial">
             <p class="quote">&ldquo;Jake changed the way we think about Jake.&rdquo;</p>
@@ -117,11 +134,14 @@
       </div>
     </section>
 
-    <section id="press" class="section section-dark">
+    <section id="press" class="section section-dark section-divided">
       <div class="section-inner">
+        <header class="section-header">
+          <h2>Press</h2>
+          <p class="section-kicker">Coverage from outlets that have never heard of Jake.</p>
+        </header>
         <div class="press-layout">
-          <div class="press-main">
-            <h2>Press</h2>
+          <div class="press-main elevated">
             <p>Everything you need to know about Jake is contained in this official press kit.</p>
             <a class="button-outline" href="press-kit.zip" download>Download Press Kit</a>
             <p class="press-note">For additional inquiries, please contact Jake. Statements will not be clarified.</p>
@@ -152,27 +172,29 @@
       </div>
     </section>
 
-    <section id="leadership" class="section section-light">
+    <section id="leadership" class="section section-light section-divided">
       <div class="section-inner">
-        <h2>Leadership</h2>
-        <p>Meet the team guiding Jake toward an increasingly abstract future.</p>
+        <header class="section-header">
+          <h2>Leadership</h2>
+          <p class="section-kicker">The faces behind the face of Jake.</p>
+        </header>
         <div class="leaders">
-          <article class="leader-card">
+          <article class="leader-card elevated">
             <h3>Jake</h3>
             <p class="leader-title">Founder &amp; Primary Jake</p>
             <p>Responsible for all core Jake decisions, including but not limited to being Jake.</p>
           </article>
-          <article class="leader-card">
+          <article class="leader-card elevated">
             <h3>Alternate Jake</h3>
             <p class="leader-title">VP of Parallel Jakes</p>
             <p>Explores timelines in which Jake made different choices, then reports back nothing actionable.</p>
           </article>
-          <article class="leader-card">
+          <article class="leader-card elevated">
             <h3>Shadow Jake</h3>
             <p class="leader-title">Chief Vibes Officer</p>
             <p>Oversees the unseen, the unspoken, and the slightly unsettling parts of the brand.</p>
           </article>
-          <article class="leader-card">
+          <article class="leader-card elevated">
             <h3>JakeGPT</h3>
             <p class="leader-title">AI Jake Strategist</p>
             <p>Trained on years of Jake decisions. Achieves 99.9% Jake-like output with 0% accountability.</p>
@@ -181,10 +203,12 @@
       </div>
     </section>
 
-    <section id="roadmap" class="section section-dark">
+    <section id="roadmap" class="section section-dark section-divided">
       <div class="section-inner narrow">
-        <h2>Roadmap</h2>
-        <p>The Jake Initiative follows a strict, meticulously unhelpful roadmap.</p>
+        <header class="section-header">
+          <h2>Roadmap</h2>
+          <p class="section-kicker">A clear plan for ongoing ambiguity.</p>
+        </header>
         <ol class="roadmap">
           <li>
             <h3>Q1 &mdash; Establish Jake</h3>
@@ -206,30 +230,32 @@
       </div>
     </section>
 
-    <section id="careers" class="section section-light">
+    <section id="careers" class="section section-light section-divided">
       <div class="section-inner narrow">
-        <h2>Careers</h2>
-        <p>Join Jake in a variety of roles that may or may not formally exist.</p>
+        <header class="section-header">
+          <h2>Careers</h2>
+          <p class="section-kicker">Help take Jake to the next level, whatever that means.</p>
+        </header>
         <div class="careers">
-          <article class="career-card">
+          <article class="career-card elevated">
             <h3>Assistant to Jake</h3>
             <p class="career-meta">Location: Remote-ish &middot; Type: Full-time-ish</p>
             <p>Hold mirrors, maintain the aura, and occasionally remind Jake that Jake is Jake.</p>
             <button type="button" class="career-apply">Apply Now</button>
           </article>
-          <article class="career-card">
+          <article class="career-card elevated">
             <h3>Jake Historian</h3>
             <p class="career-meta">Location: Temporal &middot; Type: Contract</p>
             <p>Document the evolving lore of Jake, even as the lore actively resists documentation.</p>
             <button type="button" class="career-apply">Apply Now</button>
           </article>
-          <article class="career-card">
+          <article class="career-card elevated">
             <h3>Senior Vice President of Jake</h3>
             <p class="career-meta">Location: Executive Plane &middot; Type: Leadership</p>
             <p>Provide strategic oversight for Jake without ever defining what that means.</p>
             <button type="button" class="career-apply">Apply Now</button>
           </article>
-          <article class="career-card">
+          <article class="career-card elevated">
             <h3>Jake Intern</h3>
             <p class="career-meta">Location: Unpaid but Emotionally Rewarding</p>
             <p>Assist with miscellaneous Jake initiatives. Experience required: none. Confidence required: yes.</p>
@@ -240,9 +266,12 @@
       </div>
     </section>
 
-    <section id="faq" class="section section-dark">
+    <section id="faq" class="section section-dark section-divided">
       <div class="section-inner narrow">
-        <h2>FAQ</h2>
+        <header class="section-header">
+          <h2>FAQ</h2>
+          <p class="section-kicker">Reasonable questions. Increasingly unreasonable answers.</p>
+        </header>
         <div class="faq-list">
           <details class="faq-item" open>
             <summary>Who is Jake?</summary>
@@ -308,11 +337,13 @@
       </div>
     </section>
 
-    <section id="contact" class="section section-light">
+    <section id="contact" class="section section-light section-divided">
       <div class="section-inner">
-        <h2>Contact</h2>
-        <p>Begin your Jake journey.</p>
-        <form class="contact-form">
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p class="section-kicker">Begin your Jake journey.</p>
+        </header>
+        <form class="contact-form elevated">
           <label>
             Name
             <input type="text" name="name" placeholder="Jake" />
