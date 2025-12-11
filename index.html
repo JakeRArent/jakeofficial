@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JAKE.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jake. A brand without a product." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="JAKE." />
+  <meta property="og:description" content="A brand without a product." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jakeofficial.com" />
+  <meta property="og:image" content="https://jakeofficial.com/jake-og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JAKE." />
+  <meta name="twitter:description" content="A brand without a product." />
+  <meta name="twitter:image" content="https://jakeofficial.com/jake-og-image.jpg" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">JAKE.</div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="legal.html">Legal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>JAKE.</h1>
+        <p class="tagline">A brand without a product.</p>
+        <button class="hero-button">Enter Jake</button>
+      </div>
+    </section>
+
+    <section id="about" class="section section-light">
+      <div class="section-inner">
+        <h2>About Jake</h2>
+        <p>Jake.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section section-dark">
+      <div class="section-inner three-cols">
+        <div>
+          <h3>Jake</h3>
+          <p>Jake.</p>
+        </div>
+        <div>
+          <h3>More Jake</h3>
+          <p>More Jake.</p>
+        </div>
+        <div>
+          <h3>Advanced Jake</h3>
+          <p>Advanced Jake.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-light">
+      <div class="section-inner">
+        <h2>Contact</h2>
+        <p>Begin your Jake journey.</p>
+        <form class="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Jake" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="jake@example.com" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Jake."></textarea>
+          </label>
+          <button type="submit">Send to Jake</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Jake. All rights reserved, allegedly.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.hero-button').addEventListener('click', () => {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
