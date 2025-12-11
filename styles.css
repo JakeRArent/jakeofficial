@@ -1,4 +1,4 @@
-/* Jake Brand Styles - Phase 4 */
+/* Jake Brand Styles - Phase 5 (with FAQ) */
 :root {
   --jake-black: #0d0d0d;
   --jake-white: #ffffff;
@@ -53,8 +53,8 @@ body {
 .nav a {
   color: var(--jake-silver);
   text-decoration: none;
-  margin-left: 24px;
-  font-size: 14px;
+  margin-left: 18px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
@@ -414,6 +414,62 @@ body {
   color: #555;
 }
 
+/* FAQ */
+.faq-list {
+  margin-top: 24px;
+  display: grid;
+  gap: 10px;
+}
+
+.faq-item {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 10px 14px;
+  background: rgba(4, 4, 4, 0.4);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item p {
+  font-size: 13px;
+  margin-top: 8px;
+  color: var(--jake-silver);
+}
+
+.faq-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 13px;
+}
+
+.do-not-click {
+  margin-top: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: var(--jake-white);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.do-not-click:hover {
+  background: var(--jake-white);
+  color: var(--jake-black);
+}
+
 /* Contact form */
 .contact-form {
   margin-top: 24px;
@@ -468,9 +524,9 @@ body {
 }
 
 /* Small screens */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .nav a {
-    margin-left: 16px;
+    margin-left: 14px;
     font-size: 11px;
     letter-spacing: 0.09em;
   }
